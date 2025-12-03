@@ -7,3 +7,9 @@ Plans:
 - numerical results able to be imported
 - reading in multiple results shows changes etc
 - analysis in gui
+
+Currently does:
+- basic text file input and output of party names (counts them and outputs a 'seat' count)
+
+Will soon do:
+- more advanced output, and will accept more than just party name counts (automatically)
