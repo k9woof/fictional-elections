@@ -59,17 +59,15 @@ def showcase_results():
         return counts
     parties = parties()
     counts = counts()
-
-    for i in parties:
-        print(i)
-    for i in counts:
-        print(i)
-
-def parties_labels():
-    global results
-    labels = []
-    for i in range(results[0]):
-        label = tk.Label(root, text=" ", font=("Arial", 20))
+    winning_count = max(counts)
+    counts_label.config(text=("With:", winning_count[0], "seats", winning_count[1],"%"))
+    def winner_pos():
+        for i in range(len(counts)):
+            if winning_count == counts[i]:
+                return i
+    winning_pos = winner_pos()
+    winning_party = parties[winning_pos]
+    parties_label.config(text=("Winning party: " + winning_party))
 
 # gui
 root = tk.Tk()
